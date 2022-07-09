@@ -1,7 +1,7 @@
 # RandomPlacementOnSurfaceV3
 
 This script was originally written to allow me to randomly place oxygen atoms atop a Au(221) surface. I reworked the script to allow for more options, but there were still several issues that arose with version 2. The latest version has the following upgrades:
-- It now places not atoms but whole molecules reandomly.
+- It now places not only atoms but whole molecules reandomly.
 - Pre-adsorbed molecules/atoms on the surface can be taken into consideration.
 - Molecules/atoms are placed better now.
 - The final structure with all original atoms is outputted and not just the surface in the previous version.
