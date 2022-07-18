@@ -39,7 +39,7 @@ where ```N``` is the number of copies of the molecule in this file that should b
 When using the script, it is a general form of:
 
 ```
-python -i RandomPlacementOnSurface.py -in <STRUCTURE_FILE_WITH_SURFACE> -out <NAME_OF_OUTPUT_FILE> -plot <Y or N> -mdist <REAL_VALUE_MIN_DISTANCE_BETWEEN_SURFACE_ATOMS_AND_ADSORBED_ATOMS> -xdist <REAL_VALUE_MAX_DISTANCE_BETWEEN_SURFACE_ATOM_AND_ADSORBED_ATOM> -adist <REAL_VALUE_MIN_DISTANCE_BETWEEN_ADSORBED_ATOMS>
+python -i RandomPlacement.py -in <STRUCTURE_FILE_WITH_SURFACE> -out <NAME_OF_OUTPUT_FILE> -plot <Y or N> -mdist <REAL_VALUE_MIN_DISTANCE_BETWEEN_SURFACE_ATOMS_AND_ADSORBED_ATOMS> -xdist <REAL_VALUE_MAX_DISTANCE_BETWEEN_SURFACE_ATOM_AND_ADSORBED_ATOM> -adist <REAL_VALUE_MIN_DISTANCE_BETWEEN_ADSORBED_ATOMS>
 ```
 
 with ```-plot``` you can decide if you want to make a simple plot of the surface (Y) or not (N). ```-mdist``` is purely the minimum distance between the adsorbed atom and the surface atoms, while ```-xdist``` is the maximum distance, and ```-adist``` is the minimum distance between adsorbed atoms (these being the central atoms). 
