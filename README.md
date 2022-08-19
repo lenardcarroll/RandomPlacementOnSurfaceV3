@@ -50,4 +50,4 @@ The script works by reading in the cell vectors, the list of surface atoms and t
 
 <x3,y3,z3> = <0,0,0>  and a1,a2 ∈ [0,1], and a1+a2<=1.
 
-Once the atoms/molecules have been randomly placed, the script checks that it is within a certain distance to the surface atoms and other adsorbates. It does this on a 3x3x1 unit cell. If it meets the criteria, the molecule is placed and the script conintues.
+Once the atoms/molecules have been randomly placed, the script checks that it is within a certain distance to the surface atoms and other adsorbates. It does this on a 3x3x1 unit cell. If it meets the criteria, the molecule is placed and the script continues.
