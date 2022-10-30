@@ -95,10 +95,10 @@ if len(commapos)==0:
         for i in range(firstval-1,secondval):
             ORange.append(i)
     else:
-        if x!='None':
-             ORange.append(int(x)-1)
-        else:
+        if x == 'None':
             ORange = []
+        else:
+             ORange.append(int(x)-1)
 
 else:
     for i in range(len(commapos)):
