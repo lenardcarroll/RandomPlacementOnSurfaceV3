@@ -88,6 +88,7 @@ for i in range(len(Adsorbates)):
 ORange = []
 if len(commapos)==0:
     x = Adsorbates[:len(Adsorbates)]
+    print(x)
     if '-' in x:
         xindex = x.index('-')
         firstval = int(x[:xindex])
