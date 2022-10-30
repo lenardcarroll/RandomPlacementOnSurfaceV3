@@ -96,7 +96,7 @@ if len(commapos)==0:
         for i in range(firstval-1,secondval):
             ORange.append(i)
     else:
-        if x == 'None':
+        if x == 'None' or x.split()[0] == 'None':
             ORange = []
         else:
              ORange.append(int(x)-1)
