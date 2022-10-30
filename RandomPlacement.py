@@ -97,6 +97,8 @@ if len(commapos)==0:
     else:
         if x!='None':
              ORange.append(int(x)-1)
+        else:
+            ORange = []
 
 else:
     for i in range(len(commapos)):
