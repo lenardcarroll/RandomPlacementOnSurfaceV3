@@ -330,7 +330,7 @@ while i<len(How_Many_Systems):
             tempO_atoms.append([frames[How_Many_Systems[i]].iloc[k]['Atoms'],frames[How_Many_Systems[i]].iloc[k]['X']+newxy[0],frames[How_Many_Systems[i]].iloc[k]['Y']+newxy[1],frames[How_Many_Systems[i]].iloc[k]['Z']+z_value])
         for k in range(len(multiSurface)):
             for l in range(len(tempO_atoms)):
-                value = np.sqrt((multiSurface[k][0]-tempO_atoms[l][1])**2+(multiSurface[k][1]-tempO_atoms[l][2])**2+(multiSurface[k][2]-tempO_atoms[l][2])**2)
+                value = np.sqrt((multiSurface[k][0]-tempO_atoms[l][1])**2+(multiSurface[k][1]-tempO_atoms[l][2])**2+(multiSurface[k][2]-tempO_atoms[l][3])**2)
                 if value<float(args.mindist):
                     Error_list.append("Error")
         if len(Error_list)>0:
@@ -395,7 +395,7 @@ while i<len(How_Many_Systems):
                     tempO_atoms.append([frames[How_Many_Systems[i]].iloc[k]['Atoms'],frames[How_Many_Systems[i]].iloc[k]['X']+newxy[0],frames[How_Many_Systems[i]].iloc[k]['Y']+newxy[1],frames[How_Many_Systems[i]].iloc[k]['Z']+z_value])
                 for k in range(len(multiSurface)):
                     for l in range(len(tempO_atoms)):
-                        value = np.sqrt((multiSurface[k][0]-tempO_atoms[l][1])**2+(multiSurface[k][1]-tempO_atoms[l][2])**2+(multiSurface[k][2]-tempO_atoms[l][2])**2)
+                        value = np.sqrt((multiSurface[k][0]-tempO_atoms[l][1])**2+(multiSurface[k][1]-tempO_atoms[l][2])**2+(multiSurface[k][2]-tempO_atoms[l][3])**2)
                         if value<float(args.mindist):
                             Error_list.append("Error")
                 if len(Error_list)>0:
@@ -444,7 +444,7 @@ while i<len(How_Many_Systems):
                 tempO_atoms.append([frames[How_Many_Systems[i]].iloc[k]['Atoms'],frames[How_Many_Systems[i]].iloc[k]['X']+newxy[0],frames[How_Many_Systems[i]].iloc[k]['Y']+newxy[1],frames[How_Many_Systems[i]].iloc[k]['Z']+z_value])
             for k in range(len(multiSurface)):
                 for l in range(len(tempO_atoms)):
-                    value = np.sqrt((multiSurface[k][0]-tempO_atoms[l][1])**2+(multiSurface[k][1]-tempO_atoms[l][2])**2+(multiSurface[k][2]-tempO_atoms[l][2])**2)
+                    value = np.sqrt((multiSurface[k][0]-tempO_atoms[l][1])**2+(multiSurface[k][1]-tempO_atoms[l][2])**2+(multiSurface[k][2]-tempO_atoms[l][3])**2)
                     if value<float(args.mindist):
                         Error_list.append("Error")
             if len(Error_list)>0:
