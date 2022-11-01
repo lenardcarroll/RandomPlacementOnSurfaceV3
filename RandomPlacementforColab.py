@@ -471,7 +471,7 @@ for k in range(len(df1)-48,len(df1)):
 for k in range(len(new_coordinates)):
     for j in range(len(new_O_atoms)):
         value = np.sqrt((new_coordinates[k][1]-new_O_atoms[j][1])**2 + (new_coordinates[k][2]-new_O_atoms[j][2])**2 + (new_coordinates[k][3]-new_O_atoms[j][3])**2)
-        if value<mindist:
+        if value<args.mindist:
             print("Failure! Adsorbate-Surface distance too close",value)
 
 for i in range(len(new_O_atoms)):
