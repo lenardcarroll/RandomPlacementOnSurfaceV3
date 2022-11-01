@@ -464,7 +464,24 @@ for i in range(O_atomslen,len(O_atoms)):
     Z = O_atoms[i][3]
     new_O_atoms.append([O_atoms[i][0],X,Y,Z])
 
-f = open(args.output, 'w')
+new_coordinates = []
+for k in range(len(df1)-48,len(df1)):
+    new_coordinates.append([df1.iloc[k]['Atoms'],df1.iloc[k]['X'],df1.iloc[k]['Y'],df1.iloc[k]['Z']])
+
+for k in range(len(new_coordinates)):
+    for j in range(len(new_O_atoms)):
+        value = np.sqrt((new_coordinates[k][1]-new_O_atoms[j][1])**2 + (new_coordinates[k][2]-new_O_atoms[j][2])**2 + (new_coordinates[k][3]-new_O_atoms[j][3])**2)
+        if value<mindist:
+            print("Failure! Adsorbate-Surface distance too close",value)
+
+for i in range(len(new_O_atoms)):
+    for j in range(len(new_O_atoms)):
+        if i!=j:
+            value = np.sqrt((new_O_atoms[i][1]-new_O_atoms[j][1])**2+(new_O_atoms[i][2]-new_O_atoms[j][2])**2+(new_O_atoms[i][3]-new_O_atoms[j][3])**2)
+            if value < OO_distance:
+                print("Failure! Adsorbate-Adsorbate distance too close", value)
+
+f = open(output, 'w')
 print(len(df1)+len(new_O_atoms),file=f)
 print("Surface Generated",file=f)
 for k in range(len(df1)):
@@ -472,3 +489,5 @@ for k in range(len(df1)):
 for i in new_O_atoms:
     print(i[0], i[1], i[2], i[3],file=f)
 f.close()
+
+print("Finished!")
