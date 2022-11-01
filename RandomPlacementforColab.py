@@ -473,4 +473,5 @@ for i in new_O_atoms:
     print(i[0], i[1], i[2], i[3],file=f)
 f.close()
 
-quit()
+import sys
+sys.exit()
