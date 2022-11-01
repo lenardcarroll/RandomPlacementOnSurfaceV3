@@ -481,7 +481,7 @@ for i in range(len(new_O_atoms)):
             if value < OO_distance:
                 print("Failure! Adsorbate-Adsorbate distance too close", value)
 
-f = open(output, 'w')
+f = open(args.output, 'w')
 print(len(df1)+len(new_O_atoms),file=f)
 print("Surface Generated",file=f)
 for k in range(len(df1)):
